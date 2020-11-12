@@ -41,6 +41,20 @@ public class Container {
 
     }
 
+    /**
+     * Welche Nachteile ergeben sich aus ihrer Sicht für ein solchen
+     * Fehler- handling gegenüber einer Lösung mit Exceptions?
+     *
+     * Beim Vergleichen von Strings können leicht Fehler auftreten.
+     * Jeder unterschied im Vergleichs-String führt auch zu fehlerhaften Prüfung.
+     * String vergleich mit == sind von gleicher Speicheradresse abhängig,
+     * daher sollte die Rückgabe mit der equals-Methode erfolgen.
+     */
+
+
+
+
+
     public void dump() {
         for(Member m : list){
             System.out.println(m);
