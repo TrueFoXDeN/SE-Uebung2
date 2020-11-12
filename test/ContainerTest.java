@@ -65,17 +65,17 @@ class ContainerTest {
 
         ByteArrayOutputStream outContent = new ByteArrayOutputStream();
         PrintStream originalOut = System.out;
+        System.setOut(new PrintStream(outContent));
 
         c.addMember(m1);
         c.dump();
         assertEquals("Member (ID = [1])", outContent.toString().trim());
         outContent.reset();
-//        c.addMember(m2);
-//        c.dump();
-//        assertEquals("Member (ID = [1])\nMember (ID = [2])", outContent.toString().trim());
-//        outContent.reset();
+        c.addMember(m2);
+        c.dump();
+        assertEquals("Member (ID = [1])\nMember (ID = [2])", outContent.toString().trim());
+        outContent.reset();
 
-        System.setOut(new PrintStream(outContent));
         System.setOut(originalOut);
     }
 
