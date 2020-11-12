@@ -3,7 +3,7 @@ package org.hbrs.se.ws2020.uebung2;
 import java.util.LinkedList;
 
 public class Container {
-    LinkedList<Member> list = new LinkedList<>();
+    private LinkedList<Member> list = new LinkedList<>();
 
 
     public void addMember(Member member) throws ContainerException{
@@ -11,8 +11,8 @@ public class Container {
         if (!contains(member.getID())) {
             list.add(member);
         } else {
-            throw new ContainerException("Das Member-Objekt mit der ID ["+member.getID()+"] ist bereits\n" +
-                    "vorhanden!");
+            throw new ContainerException("Das Member-Objekt mit der ID ["+member.getID()+"] ist bereits vorhanden!");
+
         }
     }
 
