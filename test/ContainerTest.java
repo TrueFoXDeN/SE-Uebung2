@@ -1,6 +1,5 @@
-package org.hbrs.se.ws2020.uebung2;
-
 import org.junit.jupiter.api.*;
+import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
