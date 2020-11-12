@@ -11,7 +11,8 @@ public class Container {
         if (!contains(member.getID())) {
             list.add(member);
         } else {
-
+            throw new ContainerException("Das Member-Objekt mit der ID ["+member.getID()+"] ist bereits\n" +
+                    "vorhanden!");
         }
     }
 
