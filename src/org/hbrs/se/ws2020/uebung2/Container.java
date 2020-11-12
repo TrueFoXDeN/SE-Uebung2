@@ -5,7 +5,7 @@ import java.util.LinkedList;
 public class Container {
     LinkedList list = new LinkedList<Member>();
 
-    public void addMember(Member member){
+    public void addMember(Member member) throws ContainerException{
 
     }
 
