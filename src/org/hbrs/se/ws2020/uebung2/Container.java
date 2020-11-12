@@ -26,7 +26,19 @@ public class Container {
     }
 
     public String deleteMember(int id) {
-        return "";
+        Member toDelete = null;
+        for(Member m : list){
+            if (m.getID().equals(id)) {
+                toDelete = m;
+            }
+        }
+        if(toDelete != null){
+            list.remove(toDelete);
+            return "Member (ID = ["+id+"]) deleted";
+        }
+
+        return "Member (ID = ["+id+"]) not found";
+
     }
 
     public void dump() {
