@@ -6,7 +6,7 @@ public class Container {
     LinkedList<Member> list = new LinkedList<>();
 
 
-    public void addMember(Member member) {
+    public void addMember(Member member) throws ContainerException{
 
         if (!contains(member.getID())) {
             list.add(member);
