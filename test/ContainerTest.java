@@ -73,7 +73,7 @@ class ContainerTest {
         outContent.reset();
         c.addMember(m2);
         c.dump();
-        assertEquals("Member (ID = [1])\nMember (ID = [2])", outContent.toString().trim());
+        assertEquals("Member (ID = [1])\nMember (ID = [2])", outContent.toString().trim().replace("\r", ""));
         outContent.reset();
 
         System.setOut(originalOut);
