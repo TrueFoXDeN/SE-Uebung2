@@ -29,7 +29,9 @@ public class Container {
     }
 
     public void dump() {
-
+        for(Member m : list){
+            System.out.println(m);
+        }
     }
 
     public int size() {
