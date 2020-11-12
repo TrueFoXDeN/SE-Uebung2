@@ -30,6 +30,7 @@ class ContainerTest {
 
     @Test
     void addMember() throws ContainerException {
+        assertEquals(0, c.size());
         c.addMember(m1);
         assertEquals(1, c.size());
         c.addMember(m2);
@@ -49,13 +50,13 @@ class ContainerTest {
         c.addMember(m2);
         c.addMember(m3);
 
-        c.deleteMember(1);
+        assertEquals("Member (ID = [1]) deleted", c.deleteMember(1));
         assertEquals(2, c.size());
-        c.deleteMember(1);
+        assertEquals("Member (ID = [1]) not found", c.deleteMember(1));
         assertEquals(2, c.size());
-        c.deleteMember(2);
+        assertEquals("Member (ID = [2]) deleted", c.deleteMember(2));
         assertEquals(1, c.size());
-        c.deleteMember(3);
+        assertEquals("Member (ID = [3]) deleted", c.deleteMember(3));
         assertEquals(0, c.size());
 
     }
