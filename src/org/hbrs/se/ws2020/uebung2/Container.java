@@ -49,6 +49,7 @@ public class Container {
      * Jeder unterschied im Vergleichs-String führt auch zu fehlerhaften Prüfung.
      * String vergleich mit == sind von gleicher Speicheradresse abhängig,
      * daher sollte die Rückgabe mit der equals-Methode erfolgen.
+     * Die Verwendung von Exceptions erfordert auch Behandlung der Fehler.
      */
 
 
